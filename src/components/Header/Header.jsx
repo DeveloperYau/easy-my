@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Link } from 'gatsby';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
-import headerStyles from './header.module.scss';
-
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar className="shadow mb-3" bg="light" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src="/icons/easy.svg"
             width="140"

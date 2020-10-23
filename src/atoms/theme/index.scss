@@ -3,48 +3,27 @@
 
 @import url('./components/header.scss');
 @import url('./components/footer.scss');
+@import "../../atoms/theme/components/colors.scss";
+.bgColor {
+    background-color: $color-light-grey;
+}
 
 body {
     font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
-    background-image: url('/gatsby-redux-starter/background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: $color-light-grey;
 }
 
 .mainContainer {
-    min-height: 84vh;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    h1 {
-        font-size: 65px;
-        padding-top: 80px;
-        text-transform: uppercase;
-        font-weight: 800;
-        color: #795aa4;
+    background-color: $color-white;
+    padding-top: 0.5rem;
+    padding: 1.5rem 15px;
+    
+    a{
+        text-decoration: none;
+        color: #4D4D4D;
     }
-    h5 {
-        color: #181516;
-        font-weight: 600;
-    }
-}
 
-.github-icon {
-    width: 42px;
-    height: auto;
-    background: lightgray;
-    border-radius: 50%;
-    padding: 2px;
-}
-
-.gatsby-square {
-    margin-top: 80px;
-    padding: 0 30px 50px;
-    border-radius: 15px;
-}
-
-@media(max-width: 767px) {
-    .gatsby-square {
-        margin-top: 20px;
+    @media(min-width: 576px) {
+        padding: 1.5rem 3rem;
     }
 }

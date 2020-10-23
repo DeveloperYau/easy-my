@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
 import image1 from '../../images/item1.png';
+import styles from './ProductListing.module.scss';
 
 const renderComponent = (products) => (
-  <div className="container">
+  <div className="container mainContainer">
+    <h2 className={styles.title}>Listing</h2>
     <div className="row row-cols-2 row-cols-sm-6">
       {products.map((product) => (
         <Link key={product.id} to={`/view/${product.id}`}>

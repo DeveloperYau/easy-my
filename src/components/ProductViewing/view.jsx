@@ -10,16 +10,16 @@ const ViewPage = ({ pageContext }) => {
   const { product } = pageContext;
   return (
     <Layout>
-      <Container>
+      <Container className="mainContainer">
         <Row className="row row-cols-2 row-cols-sm-6 justify-content-md-center">
           <Col xs={12} sm={12}>
             <Container className="px-1">
               <h2 className="font-weight-bold">{product.attributes.title}</h2>
 
               <Row className={styles.info}>
-                <Col xs={12} sm={7} md={7} className="border rounded"><Image src={image1} fluid /></Col>
-                <Col xs={12} sm={5} md={5} className="px-0">
-                  <Card className="border-left-0 border-right-0 px-0">
+                <Col xs={12} sm={8} md={8} className="border rounded"><Image src={image1} fluid /></Col>
+                <Col xs={12} sm="auto" className="px-0 mx-sm-auto">
+                  <Card className="px-3">
                     <Card.Body className="px-1 pb-1">
                       <Row className="px-0 mb-2">
                         <Col className={styles.socialAction}>
@@ -67,7 +67,7 @@ const ViewPage = ({ pageContext }) => {
                           </Col>
                         </Row>
                       </div>
-                      <footer className={`${styles.actFooter}`}>
+                      <div className={`${styles.actFooter}`}>
                         <p className={styles.hideWhenSmall}>Interested with the ad? Contact the seller</p>
                         <Button variant="outline-danger" className="text-left mb-2">
                           <span className="material-icons">
@@ -89,7 +89,7 @@ const ViewPage = ({ pageContext }) => {
                           </span>
                           <span>Chat</span>
                         </Button>
-                      </footer>
+                      </div>
                     </Card.Body>
                   </Card>
                 </Col>
